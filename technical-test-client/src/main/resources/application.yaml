@@ -1,0 +1,15 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: technical-test-client
+  r2dbc:
+    url: r2dbc:h2:mem:///technical-test
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always

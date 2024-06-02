@@ -1,0 +1,975 @@
+{
+	"info": {
+		"_postman_id": "448d19e9-e6a5-4298-8682-7826e68c173a",
+		"name": "Devsu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5948185",
+		"_collection_link": "https://gian-ciam-team.postman.co/workspace/My-Workspace~63bd7627-aaa9-4b0b-89be-732d8de91a5c/collection/5948185-448d19e9-e6a5-4298-8682-7826e68c173a?action=share&source=collection_link&creator=5948185"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\",\r\n    \"contrasena\": \"1234\",\r\n    \"idGenero\": 1,\r\n    \"estado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Gian Carrasco\",\r\n    \"direccion\": \"Av. Perú 3425\",\r\n    \"telefono\": \"999228753\",\r\n    \"contrasena\": \"ABCD\",\r\n    \"idGenero\": 1,\r\n    \"edad\": 28,\r\n    \"identificacion\": \"12345678\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar a Demanda",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"GMJCV\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por NumeroCuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/cuentas?numeroCuenta=225487",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "225487"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"478758\",\r\n    \"idTipoCuenta\": 1,\r\n    \"saldoInicial\": 2000,\r\n    \"estado\": true,\r\n    \"idCliente\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"123456\",\r\n    \"idTipoCuenta\": 2,\r\n    \"saldoInicial\": 999.9,\r\n    \"estado\": false,\r\n    \"idCliente\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar a Demanda",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": 3.3,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/cuentas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/movimientos",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"225487\",\r\n    \"idTipoMovimiento\": 1,\r\n    \"valor\": \"575\",\r\n    \"fecha\": \"2020-02-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"478758\",\r\n    \"idTipoMovimiento\": 2,\r\n    \"valor\": \"400\",\r\n    \"fecha\": \"2024-06-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar a Demanda",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"225487\",\r\n    \"idTipoMovimiento\": 1,\r\n    \"valor\": \"10\",\r\n    \"fecha\": \"2024-05-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/movimientos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prueba",
+			"item": [
+				{
+					"name": "Crear Cliente 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\",\r\n    \"contrasena\": \"1234\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cliente 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Marianela Montalvo\",\r\n    \"direccion\": \"Amazonas y NNUU\",\r\n    \"telefono\": \"097548965\",\r\n    \"contrasena\": \"5678\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cliente 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan Osorio\",\r\n    \"direccion\": \"13 junio y Equinoccial\",\r\n    \"telefono\": \"098874587\",\r\n    \"contrasena\": \"1245\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"478758\",\r\n    \"idTipoCuenta\": 1,\r\n    \"saldoInicial\": 2000,\r\n    \"estado\": true,\r\n    \"idCliente\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"225487\",\r\n    \"idTipoCuenta\": 2,\r\n    \"saldoInicial\": 100,\r\n    \"estado\": true,\r\n    \"idCliente\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"495878\",\r\n    \"idTipoCuenta\": 1,\r\n    \"saldoInicial\": 0,\r\n    \"estado\": true,\r\n    \"idCliente\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"496825\",\r\n    \"idTipoCuenta\": 1,\r\n    \"saldoInicial\": 540,\r\n    \"estado\": true,\r\n    \"idCliente\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"585545\",\r\n    \"idTipoCuenta\": 2,\r\n    \"saldoInicial\": 1000,\r\n    \"estado\": true,\r\n    \"idCliente\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/cuentas",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Movimiento 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"478758\",\r\n    \"idTipoMovimiento\": 1,\r\n    \"valor\": \"575\",\r\n    \"fecha\": \"2020-05-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Movimiento 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"225487\",\r\n    \"idTipoMovimiento\": 2,\r\n    \"valor\": \"600\",\r\n    \"fecha\": \"2022-02-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Movimiento 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"495878\",\r\n    \"idTipoMovimiento\": 2,\r\n    \"valor\": \"150\",\r\n    \"fecha\": \"2020-05-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Movimiento 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Creado satisfactoriamente\", function () {\r",
+									"    pm.expect(pm.response.code).eq(201);\r",
+									"    pm.expect(pm.response.json().error).eq(false);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCuenta\": \"496825\",\r\n    \"idTipoMovimiento\": 1,\r\n    \"valor\": \"540\",\r\n    \"fecha\": \"2022-02-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/movimientos",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Reportes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/reportes?desde=2022-02-08&hasta=2022-02-10&cliente=2",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "desde",
+									"value": "2022-02-08"
+								},
+								{
+									"key": "hasta",
+									"value": "2022-02-10"
+								},
+								{
+									"key": "cliente",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
